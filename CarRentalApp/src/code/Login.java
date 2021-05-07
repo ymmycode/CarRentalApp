@@ -29,7 +29,7 @@ public class Login extends javax.swing.JFrame {
     
     public Login() {
         initComponents();
-        ConnectionDB condb = new ConnectionDB();
+        koneksi condb = new koneksi();
         condb.Config();
         connection = (Connection) condb.connect;
         stat = condb.stmt;

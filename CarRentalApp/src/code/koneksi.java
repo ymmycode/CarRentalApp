@@ -12,7 +12,7 @@ package code;
 
 import java.sql.*;
 //import javax.swing.JOptionPane;
-public class ConnectionDB {
+public class koneksi {
     Connection connect;
     Statement stmt;
     
