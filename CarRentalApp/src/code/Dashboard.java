@@ -40,12 +40,12 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuItem13 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu6 = new javax.swing.JMenu();
-        jMenu12 = new javax.swing.JMenu();
-        jMenu13 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
-        jMenu10 = new javax.swing.JMenu();
-        jMenu8 = new javax.swing.JMenu();
-        jMenu9 = new javax.swing.JMenu();
+        jMenuItem17 = new javax.swing.JMenuItem();
+        jMenuItem18 = new javax.swing.JMenuItem();
+        jMenuItem19 = new javax.swing.JMenuItem();
+        jMenuItem20 = new javax.swing.JMenuItem();
+        jMenuItem21 = new javax.swing.JMenuItem();
+        jMenuItem22 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem6 = new javax.swing.JMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
@@ -142,33 +142,43 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jMenu6.setText("Pelanggan");
-        jMenu6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenu6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
-        jMenu12.setText("Tambah Pelanggan");
-        jMenu12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu6.add(jMenu12);
+        jMenuItem17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem17.setText("Tambah Pelanggan");
+        jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem17ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem17);
 
-        jMenu13.setText("List Pelanggan");
-        jMenu13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu6.add(jMenu13);
+        jMenuItem18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem18.setText("List Pelanggan");
+        jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem18ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jMenuItem18);
 
         jMenu3.add(jMenu6);
 
-        jMenu7.setText("Form Surat Rental");
-        jMenu7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu3.add(jMenu7);
+        jMenuItem19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem19.setText("Form Surat Rental");
+        jMenu3.add(jMenuItem19);
 
-        jMenu10.setText("Form Pengembalian");
-        jMenu10.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu3.add(jMenu10);
+        jMenuItem20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem20.setText("Form Pengembalian");
+        jMenu3.add(jMenuItem20);
 
-        jMenu8.setText("Status Rental");
-        jMenu8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu3.add(jMenu8);
+        jMenuItem21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem21.setText("Status Rental");
+        jMenu3.add(jMenuItem21);
 
-        jMenu9.setText("List Surat Rental");
-        jMenu9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenu3.add(jMenu9);
+        jMenuItem22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem22.setText("List Surat Rental");
+        jMenu3.add(jMenuItem22);
 
         jMenuBar1.add(jMenu3);
 
@@ -290,6 +300,22 @@ public class Dashboard extends javax.swing.JFrame {
         frm.setLocation(jDesktopPane1.getWidth()/2-frm.getWidth()/2, jDesktopPane1.getHeight()/2-frm.getHeight()/2);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
+    private void jMenuItem17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem17ActionPerformed
+        // TODO add your handling code here:
+        Pelanggan frm = new Pelanggan();
+        jDesktopPane1.add(frm);
+        frm.setVisible(true);
+        frm.setLocation(jDesktopPane1.getWidth()/2-frm.getWidth()/2, jDesktopPane1.getHeight()/2-frm.getHeight()/2);
+    }//GEN-LAST:event_jMenuItem17ActionPerformed
+
+    private void jMenuItem18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem18ActionPerformed
+        // TODO add your handling code here:
+        ListPelanggan frm = new ListPelanggan();
+        jDesktopPane1.add(frm);
+        frm.setVisible(true);
+        frm.setLocation(jDesktopPane1.getWidth()/2-frm.getWidth()/2, jDesktopPane1.getHeight()/2-frm.getHeight()/2);
+    }//GEN-LAST:event_jMenuItem18ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -328,17 +354,11 @@ public class Dashboard extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu10;
-    private javax.swing.JMenu jMenu12;
-    private javax.swing.JMenu jMenu13;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
     private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
-    private javax.swing.JMenu jMenu8;
-    private javax.swing.JMenu jMenu9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -348,7 +368,13 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem14;
     private javax.swing.JMenuItem jMenuItem15;
     private javax.swing.JMenuItem jMenuItem16;
+    private javax.swing.JMenuItem jMenuItem17;
+    private javax.swing.JMenuItem jMenuItem18;
+    private javax.swing.JMenuItem jMenuItem19;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem20;
+    private javax.swing.JMenuItem jMenuItem21;
+    private javax.swing.JMenuItem jMenuItem22;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

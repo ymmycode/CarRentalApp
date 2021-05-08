@@ -102,60 +102,66 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Pelanggan"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
+                  <Font name="Segoe UI" size="18" style="1"/>
                 </Property>
               </Properties>
               <SubComponents>
-                <Menu class="javax.swing.JMenu" name="jMenu12">
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem17">
                   <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="18" style="0"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Tambah Pelanggan"/>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Segoe UI" size="18" style="0"/>
-                    </Property>
                   </Properties>
-                </Menu>
-                <Menu class="javax.swing.JMenu" name="jMenu13">
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem17ActionPerformed"/>
+                  </Events>
+                </MenuItem>
+                <MenuItem class="javax.swing.JMenuItem" name="jMenuItem18">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="List Pelanggan"/>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Segoe UI" size="18" style="0"/>
                     </Property>
+                    <Property name="text" type="java.lang.String" value="List Pelanggan"/>
                   </Properties>
-                </Menu>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem18ActionPerformed"/>
+                  </Events>
+                </MenuItem>
               </SubComponents>
             </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu7">
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem19">
               <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="18" style="0"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Form Surat Rental"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem20">
+              <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
                 </Property>
-              </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu10">
-              <Properties>
                 <Property name="text" type="java.lang.String" value="Form Pengembalian"/>
+              </Properties>
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem21">
+              <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
                 </Property>
-              </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu8">
-              <Properties>
                 <Property name="text" type="java.lang.String" value="Status Rental"/>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Segoe UI" size="18" style="0"/>
-                </Property>
               </Properties>
-            </Menu>
-            <Menu class="javax.swing.JMenu" name="jMenu9">
+            </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem22">
               <Properties>
-                <Property name="text" type="java.lang.String" value="List Surat Rental"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="List Surat Rental"/>
               </Properties>
-            </Menu>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="jMenu4">
