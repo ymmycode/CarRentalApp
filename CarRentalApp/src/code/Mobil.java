@@ -698,11 +698,18 @@ public class Mobil extends javax.swing.JInternalFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        //open laporan stok sepeda
+        HistoryRental frm = new HistoryRental();
+        getParent().add(frm);
+        frm.setVisible(true);
+        frm.setLocation(getParent().getWidth()/2-frm.getWidth()/2, getParent().getHeight()/2-frm.getHeight()/2);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+        ListMobil frm = new ListMobil();
+        getParent().add(frm);
+        frm.setVisible(true);
+        frm.setLocation(getParent().getWidth()/2-frm.getWidth()/2, getParent().getHeight()/2-frm.getHeight()/2);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     void Clear()
