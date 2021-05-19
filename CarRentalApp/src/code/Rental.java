@@ -253,9 +253,6 @@ public class Rental extends javax.swing.JInternalFrame {
         jButton4 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton9 = new javax.swing.JButton();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel47 = new javax.swing.JLabel();
-        jButton10 = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -958,32 +955,12 @@ public class Rental extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel46.setText("Jikalau ingin merubah data mobil pada data rental,");
-        jLabel46.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
-        jLabel47.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel47.setText("disarankan untuk mengganti status mobil.");
-
-        jButton10.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButton10.setText("Status Mobil");
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel47)
-                    .addComponent(jLabel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addGap(340, 340, 340)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -993,7 +970,7 @@ public class Rental extends javax.swing.JInternalFrame {
         jPanel11Layout.setVerticalGroup(
             jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(77, Short.MAX_VALUE)
                 .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                         .addComponent(jButton9)
@@ -1001,14 +978,7 @@ public class Rental extends javax.swing.JInternalFrame {
                         .addComponent(jButton7)
                         .addGap(49, 49, 49))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
-                        .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4)
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addComponent(jLabel47)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton10)))
+                        .addComponent(jButton4)
                         .addContainerGap())))
         );
 
@@ -1134,10 +1104,10 @@ public class Rental extends javax.swing.JInternalFrame {
     private void jTextField3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField3KeyReleased
         // TODO add your handling code here:
         //search table1
-        DefaultTableModel table = (DefaultTableModel) jTable1.getModel();
-        String search = jTextField1.getText();
+        DefaultTableModel table = (DefaultTableModel) jTable3.getModel();
+        String search = jTextField3.getText();
         TableRowSorter<DefaultTableModel> tr = new TableRowSorter<DefaultTableModel> (table);
-        jTable1.setRowSorter(tr);
+        jTable3.setRowSorter(tr);
         tr.setRowFilter(RowFilter.regexFilter("(?i)" + search.trim()));
     }//GEN-LAST:event_jTextField3KeyReleased
 
@@ -1634,14 +1604,6 @@ public class Rental extends javax.swing.JInternalFrame {
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-        StatusMobil frm = new StatusMobil();
-        getParent().add(frm);
-        frm.setVisible(true);
-        frm.setLocation(getParent().getWidth()/2-frm.getWidth()/2, getParent().getHeight()/2-frm.getHeight()/2);
-    }//GEN-LAST:event_jButton10ActionPerformed
-
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         try {
             // TODO add your handling code here:
@@ -1822,7 +1784,6 @@ public class Rental extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1872,8 +1833,6 @@ public class Rental extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
-    private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

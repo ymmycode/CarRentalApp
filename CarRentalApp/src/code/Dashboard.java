@@ -224,7 +224,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu4.add(jMenuItem7);
 
         jMenuItem8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jMenuItem8.setText("List Pembayran");
+        jMenuItem8.setText("List Pembayaran");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem8ActionPerformed(evt);
