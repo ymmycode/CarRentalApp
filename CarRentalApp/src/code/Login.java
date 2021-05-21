@@ -162,9 +162,6 @@ public class Login extends javax.swing.JFrame {
         //login
         try {
             ProccessAutenthication();
-            //MainMenu frm = new MainMenu();
-            //frm.setVisible(true);
-            dispose();
         } catch (HeadlessException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
@@ -188,8 +185,8 @@ public class Login extends javax.swing.JFrame {
                 setVisible(false);
                 
                 //dashboard
-                //Dashboard dsb = new Dashboard();
-                //dsb.setVisible(true);
+                Dashboard dsb = new Dashboard();
+                dsb.setVisible(true);
                 
                 
                 Clear();

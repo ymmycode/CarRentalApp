@@ -50,6 +50,7 @@ public class Rental extends javax.swing.JInternalFrame {
         
         locale = Locale.forLanguageTag("in-ID");
         jDateChooser1.setLocale(locale);
+        jDateChooser1.setDateFormatString("d MMMM yyyy");
                 
         Date();
         TablePelanggan();
@@ -64,7 +65,7 @@ public class Rental extends javax.swing.JInternalFrame {
     void Date()
     {
         SimpleDateFormat df =
-                new SimpleDateFormat("d MMM yyyy",
+                new SimpleDateFormat("d MMMM yyyy",
                         new java.util.Locale("id"));
         Date today = new Date();
         jLabel16.setText(df.format(today));
@@ -671,7 +672,7 @@ public class Rental extends javax.swing.JInternalFrame {
             }
         });
 
-        jDateChooser1.setDateFormatString("d MMM yyyy");
+        jDateChooser1.setDateFormatString("d MMMM yyyy");
         jDateChooser1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jDateChooser1.setMaxSelectableDate(new java.util.Date(253370743299000L));
 
@@ -1147,7 +1148,7 @@ public class Rental extends javax.swing.JInternalFrame {
                     String tglPinjam = rs.getString("tglPinjam");
                     String tglKembali = rs.getString("tglKembali");
                     
-                    Date tglPinj = new SimpleDateFormat("d MMM yyyy",
+                    Date tglPinj = new SimpleDateFormat("d MMMM yyyy",
                         new java.util.Locale("id")).parse(tglPinjam);
                     
                     
@@ -1446,7 +1447,7 @@ public class Rental extends javax.swing.JInternalFrame {
         {JOptionPane.showMessageDialog(null , "Isi Form dengan benar");}
         else
         {
-            SimpleDateFormat sdf = new SimpleDateFormat("d MMM yyyy",
+            SimpleDateFormat sdf = new SimpleDateFormat("d MMMM yyyy",
                         new java.util.Locale("id"));
             Date date = jDateChooser1.getDate();
             
@@ -1638,7 +1639,7 @@ public class Rental extends javax.swing.JInternalFrame {
         {JOptionPane.showMessageDialog(null , "Pilih dan Isi Form dengan benar");}
         else
         {
-            SimpleDateFormat sdf = new SimpleDateFormat("d MMM yyyy",
+            SimpleDateFormat sdf = new SimpleDateFormat("d MMMM yyyy",
                         new java.util.Locale("id"));
             Date date = jDateChooser1.getDate();
 
@@ -1718,7 +1719,7 @@ public class Rental extends javax.swing.JInternalFrame {
             int counterNum = Integer.parseInt(jTextField4.getText());
             
             SimpleDateFormat sdf =
-                new SimpleDateFormat("d MMM yyyy",
+                new SimpleDateFormat("d MMMM yyyy",
                         new java.util.Locale("id"));
             Date date = jDateChooser1.getDate();
             Calendar cal = Calendar.getInstance();

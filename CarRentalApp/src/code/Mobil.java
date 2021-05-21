@@ -50,7 +50,7 @@ public class Mobil extends javax.swing.JInternalFrame {
     void Date()
     {
         SimpleDateFormat df = 
-                new SimpleDateFormat("d MMM yyyy", 
+                new SimpleDateFormat("d MMMM yyyy", 
                 new java.util.Locale("id"));
         Date today = new Date();
         jLabel16.setText(df.format(today));
