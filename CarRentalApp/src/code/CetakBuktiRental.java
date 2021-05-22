@@ -73,17 +73,18 @@ public class CetakBuktiRental extends javax.swing.JInternalFrame {
             sql = "SELECT\n" +
                     "rental.idRental,\n" +
                     "pelanggan.nama,\n" +
+                    "pelanggan.ktp,\n" +
+                    "pelanggan.alamat,\n" +
+                    "pelanggan.telp,\n" +
                     "mobil.merek,\n" +
-                    "mobil.nama,\n" +
+                    "mobil.nama AS nama_mobil,\n" +
                     "mobil.jenis,\n" +
                     "mobil.plat,\n" +
                     "rental.jangkaWaktu,\n" +
                     "rental.tglPinjam,\n" +
                     "rental.tglKembali,\n" +
                     "pembayaran.total,\n" +
-                    "pembayaran.uangmuka,\n" +
-                    "pembayaran.sisabayar,\n" +
-                    "pembayaran.`status`\n" +
+                    "pembayaran.uangmuka\n" +
                     "FROM\n" +
                     "rental\n" +
                     "INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan\n" +

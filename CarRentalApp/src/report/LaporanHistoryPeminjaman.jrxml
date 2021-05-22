@@ -52,35 +52,39 @@ history.tglInput LIKE '%Mei 2021%']]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="102" splitType="Stretch">
-			<frame>
-				<reportElement uuid="2a37ee54-d022-450d-b6a7-654d724fcd2a" mode="Opaque" x="0" y="0" width="721" height="66" backcolor="#000000"/>
-				<staticText>
-					<reportElement uuid="1fe6bb23-0870-4d34-b824-1d19fa80a146" style="Title" x="0" y="0" width="370" height="66"/>
-					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
-					<textElement verticalAlignment="Bottom">
-						<font isBold="false"/>
-					</textElement>
-					<text><![CDATA[Cherry Title]]></text>
-				</staticText>
-				<staticText>
-					<reportElement uuid="968fa7dd-421b-4dae-9e92-b7b189cdf734" style="SubTitle" x="370" y="37" width="316" height="29"/>
-					<textElement textAlignment="Right">
-						<font size="22" isBold="false"/>
-					</textElement>
-					<text><![CDATA[Cherry SubTitle]]></text>
-				</staticText>
-			</frame>
-			<frame>
-				<reportElement uuid="cca0a3b3-5a9a-43e2-aac1-5a057bb67280" mode="Opaque" x="0" y="70" width="721" height="32" forecolor="#000000" backcolor="#CC0000"/>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement uuid="74ff7f3c-868e-43a4-ae8a-689ef08529ba" x="553" y="12" width="144" height="20" forecolor="#FFFFFF"/>
-					<textElement textAlignment="Right">
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
+		<band height="146" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1a1938f0-91f8-48dd-9955-647bca05b810" x="136" y="39" width="659" height="22"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Metland, Cileungsi, Kec. Cileungsi, Bogor, Jawa Barat 16820, Indonesia]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ffe9ea85-9b80-4140-9e7b-8a72b0394338" x="136" y="61" width="659" height="24"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[+62 852-1691-4560]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="136" y="85" width="657" height="24"/>
+				<textElement>
+					<font fontName="SansSerif" size="15" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Laporan History Peminjaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="135" y="0" width="660" height="39"/>
+				<textElement>
+					<font fontName="SansSerif" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deliya RentCar Narogong]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="64c67126-b612-467d-ac16-5b6b92bdf67f" x="2" y="0" width="133" height="128"/>
+				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1NuiunSwWscC2EpmgApgCmDW67pXPxmq7"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -90,43 +94,85 @@ history.tglInput LIKE '%Mei 2021%']]>
 		<band height="18" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="f5c07557-277e-4c5e-a0ee-ad1360417f16" style="Column header" x="0" y="0" width="132" height="18" forecolor="#000000"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
 				<textElement>
-					<font isBold="false"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[id]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="5ec0327c-ede2-4cb2-9d32-3a6e65218a73" style="Column header" x="132" y="0" width="132" height="18" forecolor="#000000"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
 				<textElement>
-					<font isBold="false"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[nama]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="c603beb2-f416-46d0-bcb7-8a6b053ad98c" style="Column header" x="264" y="0" width="132" height="18" forecolor="#000000"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
 				<textElement>
-					<font isBold="false"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[idMobil]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="81ba745c-9a07-47c7-9047-6ae2a2371fcc" style="Column header" x="396" y="0" width="132" height="18" forecolor="#000000"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
 				<textElement>
-					<font isBold="false"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[total]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="ec3b4087-f658-4830-b751-4fc344a17373" style="Column header" x="528" y="0" width="132" height="18" forecolor="#000000"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
 				<textElement>
-					<font isBold="false"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[status]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="ffb69cd6-1812-45ef-99ef-1396675a3108" style="Column header" x="660" y="0" width="132" height="18" forecolor="#000000"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
 				<textElement>
-					<font isBold="false"/>
+					<font size="12" isBold="false"/>
 				</textElement>
 				<text><![CDATA[tglInput]]></text>
 			</staticText>
@@ -138,43 +184,85 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<reportElement uuid="a4a7a767-fc01-44e0-979d-1fda897e2dbd" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
 				<textField isStretchWithOverflow="true">
 					<reportElement uuid="b9b52c57-5e6f-4f18-914d-72fcfec15ac5" style="Detail" positionType="Float" x="0" y="0" width="132" height="18"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
 					<textElement>
-						<font size="14"/>
+						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement uuid="6f4b0329-f72a-4d45-a95d-d9029d0e247d" style="Detail" positionType="Float" x="132" y="0" width="132" height="18"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
 					<textElement>
-						<font size="14"/>
+						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement uuid="1c1cf592-edf0-4f80-9ac0-6e8b2bada372" style="Detail" positionType="Float" x="264" y="0" width="132" height="18"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
 					<textElement>
-						<font size="14"/>
+						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{idMobil}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement uuid="48221fb3-4f88-42e4-a767-29b3baed25ab" style="Detail" positionType="Float" x="396" y="0" width="132" height="18"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
 					<textElement>
-						<font size="14"/>
+						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement uuid="a1f81ccf-68d5-416f-9297-717321a73010" style="Detail" positionType="Float" x="528" y="0" width="132" height="18"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
 					<textElement>
-						<font size="14"/>
+						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement uuid="1ac40b83-e5fd-4673-af92-45dc4ac3db74" style="Detail" positionType="Float" x="660" y="0" width="132" height="18"/>
+					<box leftPadding="4">
+						<pen lineWidth="0.75"/>
+						<topPen lineWidth="0.75"/>
+						<leftPen lineWidth="0.75"/>
+						<bottomPen lineWidth="0.75"/>
+						<rightPen lineWidth="0.75"/>
+					</box>
 					<textElement>
-						<font size="14"/>
+						<font size="12"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{tglInput}]]></textFieldExpression>
 				</textField>
@@ -184,7 +272,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 	<columnFooter>
 		<band height="7" splitType="Stretch">
 			<line>
-				<reportElement uuid="7c63760c-0202-4bc6-97f1-c408d6fbbd54" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<reportElement uuid="7c63760c-0202-4bc6-97f1-c408d6fbbd54" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
@@ -192,31 +280,28 @@ history.tglInput LIKE '%Mei 2021%']]>
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch">
-			<frame>
-				<reportElement uuid="29e57eaf-e9cc-410b-8e3a-557ee715e569" mode="Opaque" x="0" y="0" width="802" height="25" forecolor="#D0B48E" backcolor="#000000"/>
-				<textField evaluationTime="Report">
-					<reportElement uuid="854581ac-9b85-43cf-a4d3-acde23eb25b5" style="Column header" x="757" y="3" width="40" height="20" forecolor="#FFFFFF"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement uuid="2b04bc38-40e2-43a9-8bdc-5818c33d4e80" style="Column header" x="677" y="3" width="80" height="20" forecolor="#FFFFFF"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-				</textField>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement uuid="5808ff45-a01f-48ad-9d68-d4b3c868e142" style="Column header" x="2" y="3" width="197" height="20" forecolor="#FFFFFF"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="599" y="103" width="90" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deliya RentCar]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="609" y="25" width="166" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="570" y="25" width="38" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
 		</band>
 	</pageFooter>
 	<summary>

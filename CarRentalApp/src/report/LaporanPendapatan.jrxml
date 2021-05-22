@@ -27,101 +27,111 @@ history.tglInput LIKE '%Mei 2021%']]>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="132" splitType="Stretch">
-			<frame>
-				<reportElement uuid="66753896-4c6c-456c-b027-aa4901d490fb" mode="Opaque" x="0" y="0" width="451" height="95" backcolor="#000000"/>
-				<staticText>
-					<reportElement uuid="22486034-43ae-4681-8f73-044c7c388f9f" style="Title" x="0" y="0" width="370" height="66"/>
-					<textElement>
-						<font isBold="false"/>
-					</textElement>
-					<text><![CDATA[Cherry Title]]></text>
-				</staticText>
-				<staticText>
-					<reportElement uuid="2eb2630d-446a-4b1d-890b-b26265c8615c" style="SubTitle" x="157" y="66" width="249" height="29"/>
-					<textElement>
-						<font size="22" isBold="false"/>
-					</textElement>
-					<text><![CDATA[Cherry SubTitle]]></text>
-				</staticText>
-			</frame>
-			<frame>
-				<reportElement uuid="37eb6686-9d3a-4e48-a2c9-8f97fc1e106c" mode="Opaque" x="0" y="100" width="451" height="32" forecolor="#000000" backcolor="#CC0000"/>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement uuid="9fc9af25-b7c4-466c-8955-039c654e31e4" x="307" y="12" width="144" height="20" forecolor="#FFFFFF"/>
-					<textElement textAlignment="Right">
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
+		<band height="149" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="1a1938f0-91f8-48dd-9955-647bca05b810" x="132" y="51" width="423" height="22"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Metland, Cileungsi, Kec. Cileungsi, Bogor, Jawa Barat 16820, Indonesia]]></text>
+			</staticText>
+			<image>
+				<reportElement uuid="64c67126-b612-467d-ac16-5b6b92bdf67f" x="0" y="0" width="133" height="128"/>
+				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1NuiunSwWscC2EpmgApgCmDW67pXPxmq7"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="ffe9ea85-9b80-4140-9e7b-8a72b0394338" x="133" y="73" width="421" height="24"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[+62 852-1691-4560]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="132" y="0" width="422" height="51"/>
+				<textElement>
+					<font fontName="SansSerif" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deliya RentCar Narogong]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="133" y="97" width="422" height="31"/>
+				<textElement>
+					<font fontName="SansSerif" size="15" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Laporan Pendapatan]]></text>
+			</staticText>
 		</band>
 	</title>
 	<pageHeader>
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="26" splitType="Stretch">
-			<staticText>
-				<reportElement uuid="54d650d9-6d9c-4313-b80c-038ea5bedf31" style="Column header" x="0" y="7" width="555" height="18" forecolor="#000000"/>
-				<textElement>
-					<font isBold="false"/>
-				</textElement>
-				<text><![CDATA[pendapatan]]></text>
-			</staticText>
-		</band>
+		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="18" splitType="Stretch">
-			<frame>
-				<reportElement uuid="96c44191-7cfe-48b4-b49e-6cdbbda3c188" style="Row" mode="Opaque" x="0" y="0" width="555" height="18"/>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="56c9f55c-ce54-4494-8e69-f71fed620695" style="Detail" positionType="Float" x="0" y="0" width="555" height="18"/>
-					<textElement>
-						<font size="14"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{pendapatan}]]></textFieldExpression>
-				</textField>
-			</frame>
-		</band>
-	</detail>
-	<columnFooter>
-		<band height="7" splitType="Stretch">
+		<band height="239" splitType="Stretch">
 			<line>
-				<reportElement uuid="75933b42-f08e-48d7-9a29-3601122126e3" positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1"/>
+				<reportElement uuid="75933b42-f08e-48d7-9a29-3601122126e3" positionType="FixRelativeToBottom" x="0" y="108" width="555" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="360" y="204" width="90" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deliya RentCar]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="331" y="126" width="38" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<textField pattern="EEEEE MMMM yyyy">
+				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="219" y="14" width="166" height="23" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="20" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="54d650d9-6d9c-4313-b80c-038ea5bedf31" style="Column header" x="11" y="14" width="458" height="42" forecolor="#000000"/>
+				<textElement>
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Pendapatan pada bulan                        Sebagai berikut:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="56c9f55c-ce54-4494-8e69-f71fed620695" style="Detail" positionType="Float" x="89" y="56" width="380" height="31"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pendapatan}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="54d650d9-6d9c-4313-b80c-038ea5bedf31" style="Column header" x="49" y="56" width="40" height="33" forecolor="#000000"/>
+				<textElement>
+					<font size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rp]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="369" y="126" width="166" height="20" forecolor="#000000"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
+			</textField>
 		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
 	</columnFooter>
 	<pageFooter>
-		<band height="25" splitType="Stretch">
-			<frame>
-				<reportElement uuid="84992869-6468-4632-9983-da8d1d727bd8" mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000"/>
-				<textField evaluationTime="Report">
-					<reportElement uuid="e7995e51-284d-4877-8098-98a22042be50" style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
-				</textField>
-				<textField>
-					<reportElement uuid="8cb1104b-9b29-4bf2-ac46-6c21668fded1" style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF"/>
-					<textElement textAlignment="Right" verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
-				</textField>
-				<textField pattern="EEEEE dd MMMMM yyyy">
-					<reportElement uuid="b6e01b5b-777b-4627-9ab6-755cd40f13b4" style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF"/>
-					<textElement verticalAlignment="Middle">
-						<font size="10" isBold="false"/>
-					</textElement>
-					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
-				</textField>
-			</frame>
-		</band>
+		<band splitType="Stretch"/>
 	</pageFooter>
 	<summary>
 		<band splitType="Stretch"/>
