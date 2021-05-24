@@ -70,13 +70,15 @@ public class Dashboard extends javax.swing.JFrame {
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 768, Short.MAX_VALUE)
+            .addGap(0, 721, Short.MAX_VALUE)
         );
 
+        jMenu1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_change_user_45px.png"))); // NOI18N
         jMenu1.setText("Akun");
         jMenu1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jMenuItem1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_logout_rounded_left_45px.png"))); // NOI18N
         jMenuItem1.setText("Logout");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -86,6 +88,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_exit_sign_45px.png"))); // NOI18N
         jMenuItem2.setText("Keluar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,10 +99,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_car_45px.png"))); // NOI18N
         jMenu2.setText("Mobil");
         jMenu2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jMenuItem3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_form_45px.png"))); // NOI18N
         jMenuItem3.setText("Form Mobil");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -109,6 +114,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_connection_status_on_45px.png"))); // NOI18N
         jMenuItem4.setText("Status Mobil");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,6 +124,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu2.add(jMenuItem4);
 
         jMenuItem5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_list_45px.png"))); // NOI18N
         jMenuItem5.setText("List Mobil");
         jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,6 +134,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu2.add(jMenuItem5);
 
         jMenuItem13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_list_45px.png"))); // NOI18N
         jMenuItem13.setText("History Peminjaman");
         jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,13 +145,16 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_car_rental_45px.png"))); // NOI18N
         jMenu3.setText("Rental");
         jMenu3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_customer_45px.png"))); // NOI18N
         jMenu6.setText("Pelanggan");
         jMenu6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
 
         jMenuItem17.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_add_user_group_woman_man_45px.png"))); // NOI18N
         jMenuItem17.setText("Tambah Pelanggan");
         jMenuItem17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,6 +164,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu6.add(jMenuItem17);
 
         jMenuItem18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_list_45px.png"))); // NOI18N
         jMenuItem18.setText("List Pelanggan");
         jMenuItem18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -164,6 +176,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu3.add(jMenu6);
 
         jMenuItem19.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_car_rental_45px.png"))); // NOI18N
         jMenuItem19.setText("Form Surat Rental");
         jMenuItem19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -173,6 +186,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu3.add(jMenuItem19);
 
         jMenuItem20.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_return_45px.png"))); // NOI18N
         jMenuItem20.setText("Form Pengembalian");
         jMenuItem20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -182,6 +196,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu3.add(jMenuItem20);
 
         jMenuItem21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_connection_status_on_45px.png"))); // NOI18N
         jMenuItem21.setText("Status Rental");
         jMenuItem21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -191,6 +206,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu3.add(jMenuItem21);
 
         jMenuItem22.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_list_45px.png"))); // NOI18N
         jMenuItem22.setText("List Surat Rental");
         jMenuItem22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -201,10 +217,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_online_payment_45px.png"))); // NOI18N
         jMenu4.setText("Pembayaran");
         jMenu4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jMenuItem6.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_refund_45px.png"))); // NOI18N
         jMenuItem6.setText("Pembayaran Rental");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -214,6 +232,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu4.add(jMenuItem6);
 
         jMenuItem7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_connection_status_on_45px.png"))); // NOI18N
         jMenuItem7.setText("Status Pembayaran");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,6 +242,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu4.add(jMenuItem7);
 
         jMenuItem8.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_list_45px.png"))); // NOI18N
         jMenuItem8.setText("List Pembayaran");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -233,10 +253,12 @@ public class Dashboard extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu4);
 
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_business_report_45px.png"))); // NOI18N
         jMenu5.setText("Laporan");
         jMenu5.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jMenuItem9.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_invoice_45px_1.png"))); // NOI18N
         jMenuItem9.setText("Bukti Surat Rental");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -246,6 +268,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu5.add(jMenuItem9);
 
         jMenuItem12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_graph_report_45px.png"))); // NOI18N
         jMenuItem12.setText("Laporan Rental");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -255,6 +278,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu5.add(jMenuItem12);
 
         jMenuItem11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_graph_report_45px.png"))); // NOI18N
         jMenuItem11.setText("Laporan History Peminjaman");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,6 +288,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu5.add(jMenuItem11);
 
         jMenuItem14.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_graph_report_45px.png"))); // NOI18N
         jMenuItem14.setText("Laporan Pembayaran");
         jMenuItem14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,6 +298,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu5.add(jMenuItem14);
 
         jMenuItem15.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_graph_report_45px.png"))); // NOI18N
         jMenuItem15.setText("Laporan Pendapatan");
         jMenuItem15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -282,6 +308,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenu5.add(jMenuItem15);
 
         jMenuItem16.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_graph_report_45px.png"))); // NOI18N
         jMenuItem16.setText("Laporan Pelanggan");
         jMenuItem16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -302,7 +329,7 @@ public class Dashboard extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 721, Short.MAX_VALUE)
         );
 
         pack();

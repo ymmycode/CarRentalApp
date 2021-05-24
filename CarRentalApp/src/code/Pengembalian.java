@@ -463,16 +463,16 @@ public class Pengembalian extends javax.swing.JInternalFrame {
             else
             {
                 try {
-                    GetRentalData();
+                    GetRentalData(idRental);
                 } catch (ParseException ex) {
                     Logger.getLogger(Rental.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
     }//GEN-LAST:event_jTable4MouseClicked
 
-    void GetRentalData() throws ParseException 
+    void GetRentalData(String id) throws ParseException 
     {   
-        sql = "select * from rental";
+        sql = "select * from rental where idRental = '"+id+"'";
             try{     
                 stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql);
                 rs = stat.executeQuery(sql);

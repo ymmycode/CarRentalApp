@@ -53,7 +53,7 @@ public class ListPembayaran extends javax.swing.JInternalFrame {
                     "FROM\n" +
                     "pembayaran\n" +
                     "INNER JOIN rental ON rental.idRental = pembayaran.idRental\n" +
-                    "INNER JOIN pelanggan ON rental.idPelanggan = rental.idPelanggan";
+                    "INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan";
 
             stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql);
             rs = stat.executeQuery(sql);

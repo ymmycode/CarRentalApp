@@ -102,7 +102,7 @@ WHERE
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[pelanggan_nama]]></text>
+				<text><![CDATA[Nama]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="9c59080e-8b52-477d-93af-7456a6779df7" style="Column header" x="212" y="0" width="162" height="18" forecolor="#000000"/>
@@ -116,7 +116,7 @@ WHERE
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[pelanggan_ktp]]></text>
+				<text><![CDATA[No. KTP]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="1eb4209d-1b36-49e8-b93f-1779178acabb" style="Column header" x="374" y="0" width="154" height="18" forecolor="#000000"/>
@@ -130,7 +130,7 @@ WHERE
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[pelanggan_alamat]]></text>
+				<text><![CDATA[Alamat]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="a7d52834-2a65-438f-b524-b1ddd4b5594a" style="Column header" x="528" y="0" width="132" height="18" forecolor="#000000"/>
@@ -144,7 +144,7 @@ WHERE
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[pelanggan_telp]]></text>
+				<text><![CDATA[Telp]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="b9491f3a-1c36-424c-bfa2-5245a9c204d5" style="Column header" x="660" y="0" width="142" height="18" forecolor="#000000"/>
@@ -158,7 +158,7 @@ WHERE
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[pelanggan_tglInput]]></text>
+				<text><![CDATA[Tanggal Input]]></text>
 			</staticText>
 		</band>
 	</columnHeader>

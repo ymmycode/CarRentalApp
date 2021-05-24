@@ -58,7 +58,7 @@ public class StatusPembayaran extends javax.swing.JInternalFrame {
                     "FROM\n" +
                     "pembayaran\n" +
                     "INNER JOIN rental ON rental.idRental = pembayaran.idRental\n" +
-                    "INNER JOIN pelanggan ON rental.idPelanggan = rental.idPelanggan\n" +
+                    "INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan\n" +
                     "WHERE\n" +
                     "pembayaran.sisabayar = 0";
 
@@ -84,7 +84,7 @@ public class StatusPembayaran extends javax.swing.JInternalFrame {
                     "FROM\n" +
                     "pembayaran\n" +
                     "INNER JOIN rental ON rental.idRental = pembayaran.idRental\n" +
-                    "INNER JOIN pelanggan ON rental.idPelanggan = rental.idPelanggan\n" +
+                    "INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan\n" +
                     "WHERE\n" +
                     "pembayaran.sisabayar NOT LIKE 0";
 

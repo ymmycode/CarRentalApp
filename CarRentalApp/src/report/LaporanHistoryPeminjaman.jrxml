@@ -104,7 +104,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[id]]></text>
+				<text><![CDATA[ID Rental]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="5ec0327c-ede2-4cb2-9d32-3a6e65218a73" style="Column header" x="132" y="0" width="132" height="18" forecolor="#000000"/>
@@ -118,7 +118,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[nama]]></text>
+				<text><![CDATA[Nama]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="c603beb2-f416-46d0-bcb7-8a6b053ad98c" style="Column header" x="264" y="0" width="132" height="18" forecolor="#000000"/>
@@ -132,7 +132,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[idMobil]]></text>
+				<text><![CDATA[Mobil]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="81ba745c-9a07-47c7-9047-6ae2a2371fcc" style="Column header" x="396" y="0" width="132" height="18" forecolor="#000000"/>
@@ -146,7 +146,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[total]]></text>
+				<text><![CDATA[Total]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="ec3b4087-f658-4830-b751-4fc344a17373" style="Column header" x="528" y="0" width="132" height="18" forecolor="#000000"/>
@@ -160,7 +160,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[status]]></text>
+				<text><![CDATA[Status]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="ffb69cd6-1812-45ef-99ef-1396675a3108" style="Column header" x="660" y="0" width="132" height="18" forecolor="#000000"/>
@@ -174,7 +174,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[tglInput]]></text>
+				<text><![CDATA[Tanggal Input]]></text>
 			</staticText>
 		</band>
 	</columnHeader>

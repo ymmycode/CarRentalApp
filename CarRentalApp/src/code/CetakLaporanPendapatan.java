@@ -63,7 +63,7 @@ public class CetakLaporanPendapatan extends javax.swing.JInternalFrame {
             stat = (Statement) condb.stmt;
             
             Map prs = new HashMap();            
-            InputStream filePath = this.getClass().getResourceAsStream("/report/LaporanDataPelanggan.jrxml");
+            InputStream filePath = this.getClass().getResourceAsStream("/report/LaporanPendapatan.jrxml");
             JasperDesign jd1 = JRXmlLoader.load (filePath);
             
             
