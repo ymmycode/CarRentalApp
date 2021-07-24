@@ -56,9 +56,12 @@ public class RentalList extends javax.swing.JInternalFrame {
                     "rental\n" +
                     "INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan\n" +
                     "INNER JOIN mobil ON rental.idMobil = mobil.idMobil\n" +
-                    "INNER JOIN pembayaran ON rental.idRental = pembayaran.idRental\n" +
+                    "INNER JOIN pembayaran ON rental.idRental = pembayaran.idRental";
+                    /*
+                    + "\n" +
                     "WHERE\n" +
                     "mobil.`status` = 'On Rental'";
+                    */
 
             stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql);
             rs = stat.executeQuery(sql);

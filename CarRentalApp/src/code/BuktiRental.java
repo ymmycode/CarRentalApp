@@ -63,7 +63,7 @@ public class BuktiRental extends javax.swing.JInternalFrame {
                     "INNER JOIN mobil ON rental.idMobil = mobil.idMobil\n" +
                     "INNER JOIN pembayaran ON rental.idRental = pembayaran.idRental\n" +
                     "WHERE\n" +
-                    "mobil.`status` = 'On Rental'";
+                    "rental.`status` = 'Berjalan'";
 
             stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql);
             rs = stat.executeQuery(sql);

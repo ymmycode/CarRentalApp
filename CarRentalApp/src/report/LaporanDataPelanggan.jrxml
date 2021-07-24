@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4549dc47-4e3d-4f2a-93ba-1c439c70ffb4">
-	<property name="ireport.zoom" value="1.2100000000000006"/>
+	<property name="ireport.zoom" value="1.0000000000000004"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
@@ -164,86 +164,6 @@ WHERE
 	</columnHeader>
 	<detail>
 		<band height="19" splitType="Stretch">
-			<frame>
-				<reportElement uuid="7fadc5bc-d0d7-4f25-9d3a-dc83b88c8ba7" style="Row" mode="Opaque" x="0" y="0" width="797" height="18"/>
-				<box leftPadding="4">
-					<pen lineWidth="0.0" lineStyle="Solid"/>
-					<topPen lineWidth="0.0" lineStyle="Solid"/>
-					<leftPen lineWidth="0.0" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.0" lineStyle="Solid"/>
-					<rightPen lineWidth="0.0" lineStyle="Solid"/>
-				</box>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="c14f4563-9501-4265-adc6-3301c8af78aa" style="Detail" positionType="Float" x="80" y="0" width="132" height="18"/>
-					<box leftPadding="4">
-						<pen lineWidth="0.75" lineStyle="Solid"/>
-						<topPen lineWidth="0.75" lineStyle="Solid"/>
-						<leftPen lineWidth="0.75" lineStyle="Solid"/>
-						<bottomPen lineWidth="0.75" lineStyle="Solid"/>
-						<rightPen lineWidth="0.75" lineStyle="Solid"/>
-					</box>
-					<textElement>
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{pelanggan_nama}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="bf8cae7d-a360-4002-8363-f0ce7bc6201c" style="Detail" positionType="Float" x="212" y="0" width="162" height="18"/>
-					<box leftPadding="4">
-						<pen lineWidth="0.75" lineStyle="Solid"/>
-						<topPen lineWidth="0.75" lineStyle="Solid"/>
-						<leftPen lineWidth="0.75" lineStyle="Solid"/>
-						<bottomPen lineWidth="0.75" lineStyle="Solid"/>
-						<rightPen lineWidth="0.75" lineStyle="Solid"/>
-					</box>
-					<textElement>
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{pelanggan_ktp}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="81946199-2b74-49eb-b3e6-66344e1446c2" style="Detail" positionType="Float" x="374" y="0" width="154" height="18"/>
-					<box leftPadding="4">
-						<pen lineWidth="0.75" lineStyle="Solid"/>
-						<topPen lineWidth="0.75" lineStyle="Solid"/>
-						<leftPen lineWidth="0.75" lineStyle="Solid"/>
-						<bottomPen lineWidth="0.75" lineStyle="Solid"/>
-						<rightPen lineWidth="0.75" lineStyle="Solid"/>
-					</box>
-					<textElement>
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{pelanggan_alamat}]]></textFieldExpression>
-				</textField>
-				<textField isStretchWithOverflow="true">
-					<reportElement uuid="c4c7d201-4e03-4174-8cb3-abb49b2204d4" style="Detail" positionType="Float" x="528" y="0" width="132" height="18"/>
-					<box leftPadding="4">
-						<pen lineWidth="0.75" lineStyle="Solid"/>
-						<topPen lineWidth="0.75" lineStyle="Solid"/>
-						<leftPen lineWidth="0.75" lineStyle="Solid"/>
-						<bottomPen lineWidth="0.75" lineStyle="Solid"/>
-						<rightPen lineWidth="0.75" lineStyle="Solid"/>
-					</box>
-					<textElement>
-						<font size="12"/>
-					</textElement>
-					<textFieldExpression><![CDATA[$F{pelanggan_telp}]]></textFieldExpression>
-				</textField>
-			</frame>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="56dc9df5-5d31-4f0b-89cf-f02428cbe2e5" style="Detail" positionType="Float" x="660" y="0" width="142" height="18"/>
-				<box leftPadding="4">
-					<pen lineWidth="0.75" lineStyle="Solid"/>
-					<topPen lineWidth="0.75" lineStyle="Solid"/>
-					<leftPen lineWidth="0.75" lineStyle="Solid"/>
-					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
-					<rightPen lineWidth="0.75" lineStyle="Solid"/>
-				</box>
-				<textElement>
-					<font size="12"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{pelanggan_tglInput}]]></textFieldExpression>
-			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="654461b7-4adc-49bb-9a76-73f0e0b4c1da" style="Detail" positionType="Float" x="0" y="0" width="80" height="18"/>
 				<box leftPadding="4">
@@ -258,10 +178,80 @@ WHERE
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pelanggan_idPelanggan}]]></textFieldExpression>
 			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c14f4563-9501-4265-adc6-3301c8af78aa" style="Detail" positionType="Float" x="80" y="0" width="132" height="18"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pelanggan_nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="bf8cae7d-a360-4002-8363-f0ce7bc6201c" style="Detail" positionType="Float" x="212" y="0" width="162" height="18"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pelanggan_ktp}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="81946199-2b74-49eb-b3e6-66344e1446c2" style="Detail" positionType="Float" x="374" y="0" width="154" height="18"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pelanggan_alamat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c4c7d201-4e03-4174-8cb3-abb49b2204d4" style="Detail" positionType="Float" x="528" y="0" width="132" height="18"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pelanggan_telp}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="56dc9df5-5d31-4f0b-89cf-f02428cbe2e5" style="Detail" positionType="Float" x="660" y="0" width="137" height="18"/>
+				<box leftPadding="4">
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pelanggan_tglInput}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="7" splitType="Stretch">
+		<band height="6" splitType="Stretch">
 			<line>
 				<reportElement uuid="0b684cfe-f385-4489-8025-f707deb9ed24" positionType="FixRelativeToBottom" x="0" y="3" width="802" height="1"/>
 				<graphicElement>

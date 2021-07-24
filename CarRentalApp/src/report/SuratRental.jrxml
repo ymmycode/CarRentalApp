@@ -412,13 +412,6 @@ rental.idRental = 1]]>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="29" y="78" width="90" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Deliya RentCar]]></text>
-			</staticText>
-			<staticText>
 				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="388" y="390" width="90" height="20"/>
 				<textElement>
 					<font fontName="Times New Roman" size="12" isBold="true"/>

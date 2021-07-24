@@ -619,12 +619,54 @@ public class Pengembalian extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         ///update
+        if("0".equals(jLabel8.getText()))
+        {
+            try {
+                UpdateStatus();
+            } catch (SQLException ex) {
+                Logger.getLogger(Pengembalian.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null , "Pembayaran Belum Dilunaskan!");
+        }
         
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    void UpdateStatus() throws SQLException
+    {
         try {
             int response = JOptionPane.showConfirmDialog(this, "Apakah Anda Yakin Menyelesaikan Rental yang terpilih?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
             switch (response) {
                 case JOptionPane.YES_OPTION:
-                    UpdateStatus();
+                    if ("XX".equals(jLabel11.getText()) || 
+                            "XX".equals(jLabel13.getText()) )
+                    {JOptionPane.showMessageDialog(null , "Pilih Data");}
+                    else
+                    {
+                        String idRental = jLabel13.getText();
+                        String idMobil = jLabel11.getText();
+
+                        sql1 = "update rental set "
+                                + "status = 'Selesai' "
+                                + "where idRental = '"+idRental+"'";
+
+                        sql4 = "update mobil set "
+                                + "status = 'Tersedia' "
+                                + "where idMobil = '"+idMobil+"'";
+
+                        stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql1);
+                        stat.execute(sql1);
+
+                        stat3 = (com.mysql.jdbc.Statement) connection.prepareStatement(sql4);
+                        stat3.execute(sql4);
+
+                        stat.close();
+                        stat3.close();
+
+                        JOptionPane.showMessageDialog(null , "Telah diperbarui");
+                    }
                     
                     stat.close();
                     Clear();
@@ -640,37 +682,7 @@ public class Pengembalian extends javax.swing.JInternalFrame {
         } catch (SQLException ex) {
             Logger.getLogger(Pengembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    void UpdateStatus() throws SQLException
-    {
-        if ("XX".equals(jLabel11.getText()) || 
-                "XX".equals(jLabel13.getText()) )
-        {JOptionPane.showMessageDialog(null , "Pilih Data");}
-        else
-        {
-            String idRental = jLabel13.getText();
-            String idMobil = jLabel11.getText();
-
-            sql1 = "update rental set "
-                    + "status = 'Selesai' "
-                    + "where idRental = '"+idRental+"'";
-            
-            sql4 = "update mobil set "
-                    + "status = 'Tersedia' "
-                    + "where idMobil = '"+idMobil+"'";
-            
-            stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql1);
-            stat.execute(sql1);
-
-            stat3 = (com.mysql.jdbc.Statement) connection.prepareStatement(sql4);
-            stat3.execute(sql4);
-            
-            stat.close();
-            stat3.close();
-            
-            JOptionPane.showMessageDialog(null , "Telah diperbarui");
-        }
+        
     }
     
     
