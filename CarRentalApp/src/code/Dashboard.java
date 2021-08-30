@@ -57,6 +57,7 @@ public class Dashboard extends javax.swing.JFrame {
         jMenuItem14 = new javax.swing.JMenuItem();
         jMenuItem15 = new javax.swing.JMenuItem();
         jMenuItem16 = new javax.swing.JMenuItem();
+        jMenuItem23 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -317,6 +318,16 @@ public class Dashboard extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem16);
 
+        jMenuItem23.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jMenuItem23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/icons8_graph_report_45px.png"))); // NOI18N
+        jMenuItem23.setText("Laporan Mobil");
+        jMenuItem23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem23ActionPerformed(evt);
+            }
+        });
+        jMenu5.add(jMenuItem23);
+
         jMenuBar1.add(jMenu5);
 
         setJMenuBar(jMenuBar1);
@@ -499,6 +510,14 @@ public class Dashboard extends javax.swing.JFrame {
         frm.setLocation(jDesktopPane1.getWidth()/2-frm.getWidth()/2, jDesktopPane1.getHeight()/2-frm.getHeight()/2);
     }//GEN-LAST:event_jMenuItem15ActionPerformed
 
+    private void jMenuItem23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem23ActionPerformed
+        // TODO add your handling code here:
+        LaporanMobil frm = new LaporanMobil();
+        jDesktopPane1.add(frm);
+        frm.setVisible(true);
+        frm.setLocation(jDesktopPane1.getWidth()/2-frm.getWidth()/2, jDesktopPane1.getHeight()/2-frm.getHeight()/2);
+    }//GEN-LAST:event_jMenuItem23ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -557,6 +576,7 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem20;
     private javax.swing.JMenuItem jMenuItem21;
     private javax.swing.JMenuItem jMenuItem22;
+    private javax.swing.JMenuItem jMenuItem23;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;

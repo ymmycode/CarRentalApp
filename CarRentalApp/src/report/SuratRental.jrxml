@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9173a020-19c5-4698-ac9c-5ad35a19d41c">
-	<property name="ireport.zoom" value="1.0000000000000007"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0407a225-4d1d-40c2-8365-3d0e1aa5d1fc">
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="0"/>
+	<property name="ireport.y" value="19"/>
 	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
 	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
 	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
@@ -28,14 +28,16 @@ rental.jangkaWaktu,
 rental.tglPinjam,
 rental.tglKembali,
 pembayaran.total,
-pembayaran.uangmuka
+pembayaran.uangmuka,
+pembayaran.sisabayar,
+pembayaran.`status`
 FROM
 rental
 INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan
 INNER JOIN mobil ON rental.idMobil = mobil.idMobil
 INNER JOIN pembayaran ON rental.idRental = pembayaran.idRental
 WHERE
-rental.idRental = 1]]>
+rental.idRental = 3]]>
 	</queryString>
 	<field name="idRental" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
@@ -77,55 +79,38 @@ rental.idRental = 1]]>
 	<field name="uangmuka" class="java.lang.String">
 		<fieldDescription><![CDATA[]]></fieldDescription>
 	</field>
+	<field name="sisabayar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="136" splitType="Stretch">
+		<band height="133" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="a9d8448e-4758-405e-93e0-1482acb8515c" x="148" y="-137" width="253" height="36"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="22" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Laporan Pemesanan]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="735391a4-01cf-4c83-a26d-e4d3081e2703" style="Title" x="148" y="-203" width="380" height="66" forecolor="#000000"/>
+				<reportElement uuid="ffe9ea85-9b80-4140-9e7b-8a72b0394338" x="133" y="73" width="421" height="24"/>
 				<textElement>
-					<font size="44" isBold="false"/>
+					<font size="12" isBold="false" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[Toko Sepeda Amin]]></text>
-			</staticText>
-			<image isUsingCache="true">
-				<reportElement uuid="9b06a7de-f85a-41fc-9722-b525529a0747" x="12" y="-203" width="99" height="132"/>
-				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1xzOrDY36WqO1Fawpu7_1cwFIGzLsgUp8"]]></imageExpression>
-			</image>
-			<staticText>
-				<reportElement uuid="a9d8448e-4758-405e-93e0-1482acb8515c" x="148" y="-137" width="253" height="36"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="22" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Laporan Pemesanan]]></text>
+				<text><![CDATA[+62 852-1691-4560]]></text>
 			</staticText>
 			<staticText>
-				<reportElement uuid="735391a4-01cf-4c83-a26d-e4d3081e2703" style="Title" x="148" y="-203" width="380" height="66" forecolor="#000000"/>
+				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="132" y="97" width="422" height="24"/>
 				<textElement>
-					<font size="44" isBold="false"/>
+					<font fontName="SansSerif" size="15" isBold="true" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[Toko Sepeda Amin]]></text>
+				<text><![CDATA[Bukti Rental]]></text>
 			</staticText>
-			<image isUsingCache="true">
-				<reportElement uuid="9b06a7de-f85a-41fc-9722-b525529a0747" x="12" y="-203" width="99" height="132"/>
-				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1xzOrDY36WqO1Fawpu7_1cwFIGzLsgUp8"]]></imageExpression>
-			</image>
-			<image isUsingCache="true">
-				<reportElement uuid="9b06a7de-f85a-41fc-9722-b525529a0747" x="10" y="-201" width="555" height="131"/>
-				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1kS3y9rR0U-0X8mhWWzMYFJGyBYKTh9r-"]]></imageExpression>
-			</image>
-			<image isUsingCache="true">
-				<reportElement uuid="9b06a7de-f85a-41fc-9722-b525529a0747" x="10" y="-201" width="555" height="131"/>
-				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1kS3y9rR0U-0X8mhWWzMYFJGyBYKTh9r-"]]></imageExpression>
-			</image>
+			<staticText>
+				<reportElement uuid="1a1938f0-91f8-48dd-9955-647bca05b810" x="132" y="51" width="423" height="22"/>
+				<textElement>
+					<font size="12" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Jl. Metland, Cileungsi, Kec. Cileungsi, Bogor, Jawa Barat 16820, Indonesia]]></text>
+			</staticText>
 			<image>
 				<reportElement uuid="64c67126-b612-467d-ac16-5b6b92bdf67f" x="0" y="0" width="133" height="128"/>
 				<imageExpression><![CDATA["https://drive.google.com/uc?export=view&id=1NuiunSwWscC2EpmgApgCmDW67pXPxmq7"]]></imageExpression>
@@ -137,287 +122,281 @@ rental.idRental = 1]]>
 				</textElement>
 				<text><![CDATA[Deliya RentCar Narogong]]></text>
 			</staticText>
-			<staticText>
-				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="142" y="-203" width="422" height="51"/>
-				<textElement>
-					<font fontName="SansSerif" size="26" isBold="true"/>
-				</textElement>
-				<text><![CDATA[  Deliya RentCar Narogong]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="9d8b1733-5afb-4f93-897a-74d84464c5af" x="142" y="-203" width="422" height="51"/>
-				<textElement>
-					<font fontName="SansSerif" size="26" isBold="true"/>
-				</textElement>
-				<text><![CDATA[  Deliya RentCar Narogong]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="1a1938f0-91f8-48dd-9955-647bca05b810" x="132" y="51" width="423" height="22"/>
-				<textElement>
-					<font size="12" isBold="false" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[Jl. Metland, Cileungsi, Kec. Cileungsi, Bogor, Jawa Barat 16820, Indonesia]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="ffe9ea85-9b80-4140-9e7b-8a72b0394338" x="133" y="73" width="421" height="24"/>
-				<textElement>
-					<font size="12" isBold="false" isItalic="true"/>
-				</textElement>
-				<text><![CDATA[+62 852-1691-4560]]></text>
-			</staticText>
 		</band>
 	</title>
 	<pageHeader>
 		<band splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="7" splitType="Stretch">
-			<line>
-				<reportElement uuid="2fafd1e5-b103-484d-9571-49b1892b9665" positionType="FixRelativeToBottom" x="2" y="1" width="553" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
-			</line>
-			<line>
-				<reportElement uuid="2fafd1e5-b103-484d-9571-49b1892b9665" positionType="FixRelativeToBottom" x="0" y="0" width="555" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
-			</line>
-		</band>
+		<band height="13" splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="457" splitType="Stretch">
+		<band height="525" splitType="Stretch">
 			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="31" width="273" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="388" y="488" width="86" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Nama Penyewa : ..........................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="0" width="232" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[ID Rental :]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="31" width="282" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[No. KTP/SIM : ..........................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="62" width="273" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Alamat : ..........................................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="62" width="282" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Telp. : ........................................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="124" width="282" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[No. Polisi / Plat : ..........................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="93" width="273" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Merek Mobil : .................................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="93" width="282" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Nama Mobil : ............................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="124" width="273" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Jenis Mobil : ..........................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="186" width="282" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Tanggal Kembali : ..........................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="155" width="273" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Jangka Waktu : ..........................................  Hari]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="186" width="273" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Tanggal Pinjam : ..........................................]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="734a88d4-c03e-49d9-b0a9-4ba37cd8768e" style="Detail" positionType="Float" x="76" y="0" width="142" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{idRental}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="40269f78-617c-436e-ae3c-007a2d28c13b" style="Detail" positionType="Float" x="103" y="31" width="129" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="634e875e-e985-4330-ab3e-7fa949ca3f8b" style="Detail" positionType="Float" x="365" y="31" width="140" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{ktp}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="b100d058-4d77-45a0-a6dd-77482d48af1d" style="Detail" positionType="Float" x="54" y="62" width="205" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="7500c81f-3fb3-441b-ae25-fb303e14e489" style="Detail" positionType="Float" x="326" y="62" width="203" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{telp}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="eba5b284-489f-42f9-afc6-2f66c04cf7d8" style="Detail" positionType="Float" x="76" y="93" width="167" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{merek}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="41fea3a1-6032-4212-8ff1-a67e04ca38f6" style="Detail" positionType="Float" x="349" y="93" width="180" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{nama_mobil}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="b65b7910-adcb-4630-891f-53935d3e198c" style="Detail" positionType="Float" x="76" y="124" width="167" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{jenis}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="5641d2a9-ab8b-4141-890a-db3c0dc8d6bf" style="Detail" positionType="Float" x="368" y="124" width="137" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{plat}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="d3bd6e36-7c3c-4eea-8fb8-d11e7e928474" style="Detail" positionType="Float" x="103" y="155" width="103" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{jangkaWaktu}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="c273dc89-d31b-431c-9e37-e69f13862168" style="Detail" positionType="Float" x="103" y="186" width="140" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tglPinjam}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="25ba8cc5-ef2d-4216-8cd2-511e7a8e9123" style="Detail" positionType="Float" x="388" y="186" width="123" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{tglKembali}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="217" width="282" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Uang Muka : Rp ..........................................]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="217" width="271" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Total Biaya : Rp ..........................................]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="6f868572-2d3c-4853-a5c5-47617ab51e13" style="Detail" positionType="Float" x="103" y="217" width="129" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement uuid="f24dfa43-c304-491a-b068-6621138995e0" style="Detail" positionType="Float" x="368" y="217" width="176" height="18"/>
-				<textElement>
-					<font size="12" isBold="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{uangmuka}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="2" y="248" width="553" height="31" forecolor="#3366FF"/>
-				<textElement>
-					<font size="12" isBold="false"/>
-				</textElement>
-				<text><![CDATA[Keterangan Lanjut : ...........................................................................................................]]></text>
-			</staticText>
-			<line>
-				<reportElement uuid="2fafd1e5-b103-484d-9571-49b1892b9665" positionType="FixRelativeToBottom" x="2" y="291" width="555" height="1"/>
-				<graphicElement>
-					<pen lineWidth="0.5" lineColor="#999999"/>
-				</graphicElement>
-			</line>
-			<staticText>
-				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="349" y="302" width="38" height="20"/>
-				<textElement verticalAlignment="Middle">
-					<font fontName="Times New Roman" size="12"/>
-				</textElement>
-				<text><![CDATA[Jakarta,]]></text>
+				<text><![CDATA[Ibu Deliya]]></text>
 			</staticText>
 			<textField pattern="EEEEE dd MMMMM yyyy">
-				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="388" y="302" width="166" height="20" forecolor="#000000"/>
+				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="388" y="393" width="166" height="20" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="12" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="388" y="390" width="90" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman" size="12" isBold="true"/>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="401" y="413" width="58" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<text><![CDATA[Deliya RentCar]]></text>
+				<text><![CDATA[( Manajer )]]></text>
 			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="349" y="393" width="38" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="2fafd1e5-b103-484d-9571-49b1892b9665" positionType="FixRelativeToBottom" x="0" y="380" width="555" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="11" width="232" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ID Rental :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="73" width="273" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Alamat : ..........................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="2" y="259" width="553" height="24" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Keterangan Lanjut : ...........................................................................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="135" width="282" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No. Polisi / Plat : ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="104" width="273" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Merek Mobil : .................................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="42" width="282" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No. KTP/SIM : ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="67" y="323" width="105" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Status Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="166" width="273" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jangka Waktu : ..........................................  Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="197" width="282" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal Kembali : ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="42" width="273" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Penyewa : ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="135" width="273" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Jenis Mobil : ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="197" width="273" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal Pinjam : ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="79" y="283" width="105" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Sisa Pembayaran  Rp]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="0" y="228" width="271" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Biaya : Rp ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="104" width="282" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Nama Mobil : ............................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="228" width="282" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Uang Muka : Rp ..........................................]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="4a1adc9d-ac59-4708-9dd3-e71d5940f697" x="273" y="73" width="282" height="31" forecolor="#3366FF"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Telp. : ........................................................]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c2546e7b-2093-4b60-9c6a-122f10762087" style="Detail" positionType="Float" x="67" y="11" width="117" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{idRental}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="203544a3-aefb-4295-b7ad-e140e5909b7f" style="Detail" positionType="Float" x="102" y="42" width="154" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="8ea878da-87fc-44cb-ad37-09f53264f5cc" style="Detail" positionType="Float" x="356" y="42" width="120" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ktp}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4ca60a4e-994a-4676-a9ae-183b12dbe763" style="Detail" positionType="Float" x="67" y="73" width="165" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="9bd9a724-8ad4-4727-9e2f-d10fe59b6d85" style="Detail" positionType="Float" x="317" y="73" width="159" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telp}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="5ed20049-c212-41c8-b64f-ab66910c8fb2" style="Detail" positionType="Float" x="79" y="104" width="153" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{merek}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="e0381de1-ebc1-4ac1-8175-e18625105799" style="Detail" positionType="Float" x="355" y="104" width="143" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_mobil}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="e1cdc05c-db63-41b4-b55e-065d9f1e078b" style="Detail" positionType="Float" x="79" y="135" width="159" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="c62dab1b-816d-421b-bd5c-f5daee08615a" style="Detail" positionType="Float" x="369" y="135" width="155" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{plat}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a5a14910-d8d4-4944-90d3-50bed649bf12" style="Detail" positionType="Float" x="98" y="166" width="106" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jangkaWaktu}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d92828ed-23b0-4479-80a4-23a9af1c49e4" style="Detail" positionType="Float" x="102" y="197" width="136" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tglPinjam}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="4fdfb123-4100-4a5d-a84d-85d45904793b" style="Detail" positionType="Float" x="389" y="197" width="155" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tglKembali}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="5e8f6eca-3cd1-4c3a-80d0-c6ea29b9c85c" style="Detail" positionType="Float" x="98" y="228" width="158" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="fb146fe0-7408-4c61-af19-05873023b96a" style="Detail" positionType="Float" x="374" y="228" width="136" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{uangmuka}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="f214fe9f-07e5-4c1a-90c3-207c74190b40" style="Detail" positionType="Float" x="198" y="285" width="228" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sisabayar}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="a53c5871-6aab-4227-b345-25877a8b782d" style="Detail" positionType="Float" x="184" y="325" width="172" height="18"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 	<columnFooter>

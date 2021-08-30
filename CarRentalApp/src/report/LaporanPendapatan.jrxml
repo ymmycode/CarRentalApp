@@ -20,7 +20,7 @@ FROM
 pembayaran
 INNER JOIN history ON pembayaran.idRental = history.idRental
 WHERE
-history.tglInput LIKE '%Mei 2021%']]>
+history.tglInput LIKE '%Juli 2021%']]>
 	</queryString>
 	<field name="pendapatan" class="java.lang.Double"/>
 	<background>
@@ -69,20 +69,13 @@ history.tglInput LIKE '%Mei 2021%']]>
 		<band splitType="Stretch"/>
 	</columnHeader>
 	<detail>
-		<band height="239" splitType="Stretch">
+		<band height="259" splitType="Stretch">
 			<line>
 				<reportElement uuid="75933b42-f08e-48d7-9a29-3601122126e3" positionType="FixRelativeToBottom" x="0" y="108" width="555" height="1"/>
 				<graphicElement>
 					<pen lineWidth="0.5" lineColor="#999999"/>
 				</graphicElement>
 			</line>
-			<staticText>
-				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="360" y="204" width="90" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Deliya RentCar]]></text>
-			</staticText>
 			<staticText>
 				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="331" y="126" width="38" height="20"/>
 				<textElement verticalAlignment="Middle">
@@ -91,18 +84,18 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<text><![CDATA[Jakarta,]]></text>
 			</staticText>
 			<textField pattern="EEEEE MMMM yyyy">
-				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="219" y="14" width="166" height="23" forecolor="#000000"/>
+				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="221" y="14" width="235" height="23" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
 					<font size="20" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="54d650d9-6d9c-4313-b80c-038ea5bedf31" style="Column header" x="11" y="14" width="458" height="42" forecolor="#000000"/>
+				<reportElement uuid="54d650d9-6d9c-4313-b80c-038ea5bedf31" style="Column header" x="30" y="14" width="491" height="42" forecolor="#000000"/>
 				<textElement>
 					<font size="20" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Pendapatan pada bulan                        Sebagai berikut:]]></text>
+				<text><![CDATA[Pendapatan pada bulan                          Sebagai berikut:]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
 				<reportElement uuid="56c9f55c-ce54-4494-8e69-f71fed620695" style="Detail" positionType="Float" x="89" y="56" width="380" height="31"/>
@@ -125,6 +118,20 @@ history.tglInput LIKE '%Mei 2021%']]>
 				</textElement>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="385" y="225" width="86" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ibu Deliya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="398" y="150" width="58" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[( Manajer )]]></text>
+			</staticText>
 		</band>
 	</detail>
 	<columnFooter>

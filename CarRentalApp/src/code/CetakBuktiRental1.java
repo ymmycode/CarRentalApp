@@ -9,13 +9,11 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Statement;
 import java.awt.BorderLayout;
 import java.awt.Container;
-import java.io.FileNotFoundException;
+import java.awt.HeadlessException;
 import java.io.InputStream;
 import java.sql.ResultSet;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
@@ -30,7 +28,7 @@ import net.sf.jasperreports.view.JRViewer;
  *
  * @author achma
  */
-public class CetakBuktiRental extends javax.swing.JInternalFrame {
+public class CetakBuktiRental1 extends javax.swing.JInternalFrame {
 
     
     Connection connection;
@@ -40,24 +38,19 @@ public class CetakBuktiRental extends javax.swing.JInternalFrame {
     
     /**
      * Creates new form CetakBuktiRental
+     * @param id
      */
-    public CetakBuktiRental(String id) {
-         try {
-            initComponents();
-            koneksi condb = new koneksi();
-            condb.Config();
-            connection = (Connection) condb.connect;
-            stat = (com.mysql.jdbc.Statement) condb.stmt;
-            idRental = id;
-            SuratRental();
-        } catch (FileNotFoundException ex) {
-            Logger.getLogger(CetakBuktiRental.class.getName()).log(Level.SEVERE, null, ex);
-        }
+    public CetakBuktiRental1(String id) {
+        initComponents();
+        koneksi condb = new koneksi();
+        condb.Config();
+        connection = (Connection) condb.connect;
+        stat = (com.mysql.jdbc.Statement) condb.stmt;
+        idRental = id;
+        First();
     }
 
-    
-    private void SuratRental() throws FileNotFoundException
-    {
+    private void First() throws HeadlessException {
         try{
             koneksi condb = new koneksi();
             condb.Config();
@@ -84,7 +77,9 @@ public class CetakBuktiRental extends javax.swing.JInternalFrame {
                     "rental.tglPinjam,\n" +
                     "rental.tglKembali,\n" +
                     "pembayaran.total,\n" +
-                    "pembayaran.uangmuka\n" +
+                    "pembayaran.uangmuka,\n" +
+                    "pembayaran.sisabayar,\n" +
+                    "pembayaran.`status`\n" +
                     "FROM\n" +
                     "rental\n" +
                     "INNER JOIN pelanggan ON rental.idPelanggan = pelanggan.idPelanggan\n" +
@@ -92,7 +87,6 @@ public class CetakBuktiRental extends javax.swing.JInternalFrame {
                     "INNER JOIN pembayaran ON rental.idRental = pembayaran.idRental\n" +
                     "WHERE\n" +
                     "rental.idRental = '"+idRental+"'";
-            
             
             JRDesignQuery newQuery = new JRDesignQuery();
             newQuery.setText(sql);
@@ -103,15 +97,6 @@ public class CetakBuktiRental extends javax.swing.JInternalFrame {
             Container c1 = getContentPane();
             c1.setLayout(new BorderLayout());
             c1.add(viewer1);
-        
-            /*
-            InputStream file = this.getClass().getClassLoader().getResourceAsStream("/sip/jadwal.jrxml");
-            JasperReport jr= JasperCompileManager.compileReport(System.getProperties().getProperty("java.class.path").split(";")[System.getProperties().getProperty("java.class.path").split(";").length - 1]+"\\sip\\jadwal.jrxml");
-            JasperPrint jp = JasperFillManager.fillReport(jr, null,con);
-            JasperViewer jv = new JasperViewer(jp,false);
-            jv.setVisible(true);
-            
-                    */
             
         }catch(JRException e){
             JOptionPane.showMessageDialog(null, e);

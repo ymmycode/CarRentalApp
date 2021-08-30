@@ -280,14 +280,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="134" splitType="Stretch">
-			<staticText>
-				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="599" y="103" width="90" height="20"/>
-				<textElement>
-					<font fontName="Times New Roman" size="12" isBold="true"/>
-				</textElement>
-				<text><![CDATA[Deliya RentCar]]></text>
-			</staticText>
+		<band height="175" splitType="Stretch">
 			<textField pattern="EEEEE dd MMMMM yyyy">
 				<reportElement uuid="914a09c5-eebd-4d39-8706-0a71aa464a95" style="Column header" x="609" y="25" width="166" height="20" forecolor="#000000"/>
 				<textElement verticalAlignment="Middle">
@@ -301,6 +294,20 @@ history.tglInput LIKE '%Mei 2021%']]>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
 				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="616" y="120" width="86" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ibu Deliya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="629" y="45" width="58" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[( Manajer )]]></text>
 			</staticText>
 		</band>
 	</pageFooter>

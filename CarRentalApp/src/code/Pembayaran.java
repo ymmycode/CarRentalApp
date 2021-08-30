@@ -80,7 +80,7 @@ public class Pembayaran extends javax.swing.JInternalFrame {
                     "INNER JOIN mobil ON rental.idMobil = mobil.idMobil\n" +
                     "INNER JOIN pembayaran ON rental.idRental = pembayaran.idRental\n" +
                     "WHERE\n" +
-                    "mobil.`status` = 'On Rental'";
+                    "pembayaran.`status` = 'Cicil'";
 
             stat = (com.mysql.jdbc.Statement) connection.prepareStatement(sql);
             rs = stat.executeQuery(sql);
@@ -188,6 +188,7 @@ public class Pembayaran extends javax.swing.JInternalFrame {
         jLabel19.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel19.setText("Total Dibayar");
 
+        jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -612,9 +613,12 @@ public class Pembayaran extends javax.swing.JInternalFrame {
                     String total = rs.getString("pembayaran.total");
                     
                     if(sisabayar != null) 
+                    {
                         jLabel9.setText(uangMuka);
                         jLabel6.setText(sisabayar);
                         jLabel23.setText(total);
+                       
+                    }   
                     
                     rs.close();
                     stat.close();
@@ -630,26 +634,32 @@ public class Pembayaran extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         ///update
+        if("XX".equals(jLabel17.getText()) && "XX".equals(jLabel21.getText()))
+        {
+            JOptionPane.showMessageDialog(null, "Tidak ada yang berubah! Semua sama saja!");
+        }
+        else
+        {
+            try {
+                int response = JOptionPane.showConfirmDialog(this, "Apakah Anda Ingin mengubah data yang terpilih?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+                switch (response) {
+                    case JOptionPane.YES_OPTION:
+                    UpdatePayment();
 
-        try {
-            int response = JOptionPane.showConfirmDialog(this, "Apakah Anda Ingin mengubah data yang terpilih?", "Confirm", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
-            switch (response) {
-                case JOptionPane.YES_OPTION:
-                UpdatePayment();
+                    stat.close();
+                    Clear();
 
-                stat.close();
-                Clear();
-
-                break;
-                case JOptionPane.NO_OPTION:
-                break;
-                case JOptionPane.CLOSED_OPTION:
-                break;
-                default:
-                break;
+                    break;
+                    case JOptionPane.NO_OPTION:
+                    break;
+                    case JOptionPane.CLOSED_OPTION:
+                    break;
+                    default:
+                    break;
+                }
+            } catch (SQLException ex) {
+                Logger.getLogger(Pengembalian.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } catch (SQLException ex) {
-            Logger.getLogger(Pengembalian.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -667,7 +677,8 @@ public class Pembayaran extends javax.swing.JInternalFrame {
                     
             sql = "update pembayaran set "
                     + "uangmuka = '"+uangMuka+"', "
-                    + "sisabayar = '"+sisaBayar+"' "
+                    + "sisabayar = '"+sisaBayar+"', "
+                    + "status = 'Lunas' "
                     + "where idRental = '"+idRental+"'";
             
             

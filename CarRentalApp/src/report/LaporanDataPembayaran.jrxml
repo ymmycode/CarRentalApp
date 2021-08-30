@@ -178,7 +178,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
-				<text><![CDATA[Uang Muka]]></text>
+				<text><![CDATA[Terbayar]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="df800c56-45d4-4db9-a368-1b248820381d" style="Column header" x="594" y="0" width="99" height="18" forecolor="#000000"/>
@@ -347,7 +347,7 @@ history.tglInput LIKE '%Mei 2021%']]>
 		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="147" splitType="Stretch">
+		<band height="156" splitType="Stretch">
 			<staticText>
 				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="574" y="21" width="38" height="20"/>
 				<textElement verticalAlignment="Middle">
@@ -363,11 +363,18 @@ history.tglInput LIKE '%Mei 2021%']]>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")).format(new Date())]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="603" y="99" width="90" height="20"/>
-				<textElement>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="622" y="116" width="86" height="20"/>
+				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="12" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Deliya RentCar]]></text>
+				<text><![CDATA[Ibu Deliya]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c4245620-cf6a-4053-b19c-78112b39499a" x="635" y="41" width="58" height="20"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[( Manajer )]]></text>
 			</staticText>
 		</band>
 	</pageFooter>
